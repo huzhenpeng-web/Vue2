@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1.导入Vue的库文件 -->
+    <script src="./lib/vue.js"></script>
+</head>
+
+<body>
+    <!-- 希望Vue可以控制下面的div -->
+    <div id="app">{{username}}</div>
+    <!-- 2.创建Vue的实例对象 -->
+    <script>
+        const vm = new Vue({
+            //el属性时固定的写法  希望当前vm实例控制页面上的哪个区域,接受的值是一个选择器
+            el: '#app',
+            //data对象就是要渲染到页面上的数据
+            data: {
+                username: '胡振鹏'
+            }
+        })
+    </script>
+</body>
+
+</html>
